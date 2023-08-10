@@ -112,6 +112,14 @@ h3
                                 background-color: hsl(185, 41%, 84%)
                                 color: hsl(183, 100%, 15%)
 
+                        .selected
+                            background-color: hsl(185, 41%, 84%)
+                            width: 31%
+                            height: 42%
+                            border-radius: 5px
+                            font-size: 24px
+                            color: hsl(183, 100%, 15%)
+
                         .custom
                             background-color: hsl(0, 0%, 100%)
                             width: 30%
@@ -119,8 +127,26 @@ h3
                             border-radius: 5px
                             text-align: right
                             font-size: 24px
-                            color: hsl(189, 41%, 97%)
-                            border: none
+                            color: hsl(183, 100%, 15%)
+                            border: 2px solid transparent
+                            transition: border-color 0.3s ease-in-out
+
+                            &:hover
+                                cursor: pointer
+                                border-color: hsl(185, 41%, 84%)
+                                color: hsl(183, 100%, 15%)
+
+                        .selectedCustom
+                            background-color: hsl(0, 0%, 100%)
+                            width: 30%
+                            height: 41%
+                            border-radius: 5px
+                            text-align: right
+                            font-size: 24px
+                            color: hsl(183, 100%, 15%)
+                            border: 2px solid transparent
+                            transition: border-color 0.3s ease-in-out
+                            border-color: hsl(185, 41%, 84%)
 
                 .wrapperPeople
                     // background-color: rgba(255,0,0,0.3)
@@ -237,6 +263,7 @@ h3
                         border-radius: 5px
                         font-size: 24px
                         color: hsl(183, 100%, 15%)
+                        border: none
 
                         &:hover
                             background-color: hsl(185, 41%, 84%)
