@@ -5,7 +5,8 @@ const ConfigContext = createContext();
 // eslint-disable-next-line
 const ConfigProvider = ({ children }) => {
     const [totalBill, setTotalBill] = useState('')
-    const [valueTip, setValueTip] = useState(null);
+    const [valueTip, setValueTip] = useState(null)
+    const [customValue, setCustomValue] = useState('')
     const [people, setPeople] = useState('')
 
     const values = {
@@ -13,6 +14,8 @@ const ConfigProvider = ({ children }) => {
         setTotalBill,
         valueTip,
         setValueTip,
+        customValue,
+        setCustomValue,
         people,
         setPeople
     }

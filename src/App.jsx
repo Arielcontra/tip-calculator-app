@@ -18,7 +18,7 @@ function App() {
         </div>
         <footer className="attribution">
           <p> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target={"_blank"} rel="noreferrer">Frontend Mentor</a>.
-            Coded by <a href="https://github.com/Arielcontra/tip-calculator-app" target={"_blank"} rel="noreferrer">Ariel Contreras</a>.</p>
+            Coded by <a href="https://www.linkedin.com/in/ariel-contreras-599ab921b" target={"_blank"} rel="noreferrer">Ariel Contreras</a>.</p>
         </footer>
       </div>
 

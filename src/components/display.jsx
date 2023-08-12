@@ -1,21 +1,25 @@
 import { useContext } from 'react'
 import { ConfigContext } from '../config-provider'
+
 function Display() {
 
-    const { totalBill, valueTip, people } = useContext(ConfigContext)
+    const { totalBill, setTotalBill, valueTip, setValueTip, setCustomValue, people, setPeople } = useContext(ConfigContext)
+    const spent = parseInt(totalBill)
+    const selectTip = parseInt(valueTip)
+    const totalPeople = parseInt(people)
 
-    const tipTotal = (totalBill * valueTip) / 100
+    const tipTotal = (spent * selectTip) / 100
 
-    const total = (totalBill + tipTotal) / people
+    const total = (spent + tipTotal) / totalPeople
 
-    const tip = tipTotal / people
+    const tip = tipTotal / totalPeople
 
-    
-        // if (totalBill !== '' && valueTip !== '') {
-        //   const tipTotal = parseFloat(totalBill) + parseFloat(valueTip);
-          
-        // } 
-      
+    const handleClick = () => {
+        setValueTip('')
+        setCustomValue('')
+        setTotalBill('')
+        setPeople('')
+    }
 
     return (
         <div className="display">
@@ -40,7 +44,7 @@ function Display() {
                         </div>
                     </div>
                 </div>
-                <button className="buttonReset">RESET</button>
+                <button type='reset' onClick={() => handleClick} className="buttonReset" disabled={true}>RESET</button>
             </div>
         </div>
     )

@@ -1,10 +1,11 @@
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { ConfigContext } from '../config-provider'
 
 function SelectTip() {
 
     const { valueTip, setValueTip } = useContext(ConfigContext)
-    const [customValue, setCustomValue] = useState('')
+    const { customValue, setCustomValue } = useContext(ConfigContext)
+    
 
     const handleClick = buttonId => {
         setValueTip(buttonId)
