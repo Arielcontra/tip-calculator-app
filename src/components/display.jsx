@@ -3,7 +3,8 @@ import { ConfigContext } from '../config-provider'
 
 function Display() {
 
-    const { totalBill, setTotalBill, valueTip, setValueTip, setCustomValue, people, setPeople } = useContext(ConfigContext)
+    const { totalBill, valueTip, people, setReset } = useContext(ConfigContext)
+
     const spent = parseInt(totalBill)
     const selectTip = parseInt(valueTip)
     const totalPeople = parseInt(people)
@@ -15,10 +16,11 @@ function Display() {
     const tip = tipTotal / totalPeople
 
     const handleClick = () => {
-        setValueTip('')
-        setCustomValue('')
-        setTotalBill('')
-        setPeople('')
+        setReset(true);
+
+        setTimeout(() => {
+            setReset(false)
+        }, 1000)
     }
 
     return (
@@ -44,7 +46,7 @@ function Display() {
                         </div>
                     </div>
                 </div>
-                <button type='reset' onClick={() => handleClick} className="buttonReset" disabled={true}>RESET</button>
+                <button type='reset' onClick={handleClick} className="buttonReset" >RESET</button>
             </div>
         </div>
     )

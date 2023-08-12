@@ -2,10 +2,14 @@ import { useContext } from 'react'
 import { ConfigContext } from '../config-provider'
 
 function People() {
-    const { people, setPeople } = useContext(ConfigContext)
-    
+    const { people, setPeople, reset } = useContext(ConfigContext)
 
     const handlebill = (e) => { setPeople(e.target.value) }
+
+    if (reset === true) {
+        setPeople('')
+    }
+
 
     return (
         <div className="wrapperPeople">

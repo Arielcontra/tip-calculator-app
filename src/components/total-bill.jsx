@@ -2,9 +2,13 @@ import { useContext } from 'react'
 import { ConfigContext } from '../config-provider'
 
 function TotalBill() {
-    const { totalBill, setTotalBill } = useContext(ConfigContext)
+    const { totalBill, setTotalBill, reset } = useContext(ConfigContext)
 
     const handlebill = (e) => { setTotalBill(e.target.value) }
+
+    if (reset === true) {
+        setTotalBill('')
+    }
 
     return (
         <div className="wrapperBill">

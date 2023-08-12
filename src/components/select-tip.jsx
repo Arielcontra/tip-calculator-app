@@ -1,11 +1,10 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { ConfigContext } from '../config-provider'
 
 function SelectTip() {
 
-    const { valueTip, setValueTip } = useContext(ConfigContext)
-    const { customValue, setCustomValue } = useContext(ConfigContext)
-    
+    const { valueTip, setValueTip, customValue, setCustomValue, reset } = useContext(ConfigContext)
+
 
     const handleClick = buttonId => {
         setValueTip(buttonId)
@@ -17,6 +16,15 @@ function SelectTip() {
         setCustomValue(newValue)
         setValueTip(newValue)
     }
+
+
+    useEffect(() => {
+        if (reset === true) {
+            setValueTip('');
+            setCustomValue('');
+        }
+    }, [reset]);
+
 
     return (
         <div className="wrapperSelectTip">
@@ -39,7 +47,7 @@ function SelectTip() {
                 <button onClick={() => handleClick(50)} className={valueTip === 50 ? 'selected' : 'button'}>
                     50%
                 </button>
-                <input type="number" placeholder="Custom" onChange={handleCustomChange}
+                <input type="number" placeholder="Custom" value={customValue} onChange={handleCustomChange}
                     className={customValue !== '' ? 'selectedCustom' : 'custom'}
                 />
             </div>
