@@ -17,7 +17,6 @@ function SelectTip() {
         setValueTip(newValue)
     }
 
-
     useEffect(() => {
         if (reset === true) {
             setValueTip('');

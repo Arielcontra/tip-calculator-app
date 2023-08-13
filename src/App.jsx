@@ -21,8 +21,6 @@ function App() {
             Coded by <a href="https://www.linkedin.com/in/ariel-contreras-599ab921b" target={"_blank"} rel="noreferrer">Ariel Contreras</a>.</p>
         </footer>
       </div>
-
-
     </>
   )
 }

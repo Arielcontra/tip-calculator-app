@@ -12,18 +12,12 @@ const ConfigProvider = ({ children }) => {
     const [buttonLocked, setButtonLocked] = useState(true)
 
     const values = {
-        totalBill,
-        setTotalBill,
-        valueTip,
-        setValueTip,
-        customValue,
-        setCustomValue,
-        people,
-        setPeople,
-        reset,
-        setReset,
-        buttonLocked,
-        setButtonLocked
+        totalBill, setTotalBill,
+        valueTip, setValueTip,
+        customValue, setCustomValue,
+        people, setPeople,
+        reset, setReset,
+        buttonLocked, setButtonLocked
     }
 
     return (
