@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { ConfigContext } from '../config-provider'
 
 function People() {
-    const { people, setPeople, reset } = useContext(ConfigContext)
+    const { totalBill, valueTip, customValue, people, setPeople, reset } = useContext(ConfigContext)
 
     const handlebill = (e) => { setPeople(e.target.value) }
 
@@ -10,6 +10,7 @@ function People() {
         setPeople('')
     }
 
+    const showAlert = !(totalBill > 0 || customValue > 0 || valueTip > 0)
 
     return (
         <div className="wrapperPeople">
@@ -17,7 +18,7 @@ function People() {
                 <div className="numberOfPeople">
                     <p>Number of People</p>
                 </div>
-                <div className="cantBeZero">
+                <div className={showAlert ? 'locked' : 'cantBeZero'}>
                     <p style={{ color: "red" }}>Can`t be zero</p>
                 </div>
             </div>

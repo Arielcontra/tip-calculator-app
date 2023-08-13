@@ -3,16 +3,13 @@ import { ConfigContext } from '../config-provider'
 
 function Display() {
 
-    const { totalBill, valueTip, people, setReset } = useContext(ConfigContext)
+    const { totalBill, valueTip, customValue, people, setReset, buttonLocked, setButtonLocked } = useContext(ConfigContext)
 
     const spent = parseInt(totalBill)
     const selectTip = parseInt(valueTip)
     const totalPeople = parseInt(people)
-
     const tipTotal = (spent * selectTip) / 100
-
     const total = (spent + tipTotal) / totalPeople
-
     const tip = tipTotal / totalPeople
 
     const handleClick = () => {
@@ -22,6 +19,10 @@ function Display() {
             setReset(false)
         }, 1000)
     }
+
+    const showButton = !(spent > 0 || totalPeople > 0 || valueTip > 0 || customValue > 0)
+    setButtonLocked(showButton)
+
 
     return (
         <div className="display">
@@ -33,7 +34,7 @@ function Display() {
                             <p>/ person</p>
                         </div>
                         <div className="wrapperDisplayTip">
-                            <h1 className="displayTip">{tip}</h1>
+                            <h1 className="displayTip">{tip > 0 ? tip.toFixed(2) : '0,00'}</h1>
                         </div>
                     </div>
                     <div className="wrapperTotal">
@@ -42,11 +43,11 @@ function Display() {
                             <p>/ person</p>
                         </div>
                         <div className="wrapperDisplayTotal">
-                            <h1 className="displayTotal">{total}</h1>
+                            <h1 className="displayTotal">{total > 0 ? total.toFixed(2) : '0,00'}</h1>
                         </div>
                     </div>
                 </div>
-                <button type='reset' onClick={handleClick} className="buttonReset" >RESET</button>
+                <button type='reset' onClick={handleClick} className={buttonLocked ? 'oculto' : 'buttonReset'} >RESET</button>
             </div>
         </div>
     )

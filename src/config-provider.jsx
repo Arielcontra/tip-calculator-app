@@ -9,6 +9,7 @@ const ConfigProvider = ({ children }) => {
     const [customValue, setCustomValue] = useState('')
     const [people, setPeople] = useState('')
     const [reset, setReset] = useState(false)
+    const [buttonLocked, setButtonLocked] = useState(true)
 
     const values = {
         totalBill,
@@ -20,7 +21,9 @@ const ConfigProvider = ({ children }) => {
         people,
         setPeople,
         reset,
-        setReset
+        setReset,
+        buttonLocked,
+        setButtonLocked
     }
 
     return (
