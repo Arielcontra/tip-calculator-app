@@ -1,14 +1,16 @@
 import './index.sass'
 import Slider from './components/slider'
 import Display from "./components/display"
+import gitHub from './assets/images/github-mark.png'
+import logo from './assets/images/logo.svg'
 
 function App() {
 
   return (
     <>
       <div className='wrapperApp'>
-        <header>
-          <h2 className="title">SPLI TTER</h2>
+        <header className='header'>
+          <img src={logo} alt="Logo splitter" />
         </header>
         <div className='modal'>
           <div className="wrapperSlider-Display">
@@ -17,8 +19,12 @@ function App() {
           </div>
         </div>
         <footer className="attribution">
-          <p> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target={"_blank"} rel="noreferrer">Frontend Mentor</a>.
-            Coded by <a href="https://www.linkedin.com/in/ariel-contreras-599ab921b" target={"_blank"} rel="noreferrer">Ariel Contreras</a>.</p>
+          <p className='link'> Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target={"_blank"} rel="noreferrer">Frontend Mentor</a>.
+            Coded by <a href="https://www.linkedin.com/in/ariel-contreras-599ab921b" target={"_blank"} rel="noreferrer">Ariel Contreras.  </a>
+            <a href="https://github.com/Arielcontra/tip-calculator-app" target={"_blank"} rel="noreferrer">
+              <img src={gitHub} alt="Logo github" className="logoGitHub" />
+            </a>
+          </p>
         </footer>
       </div>
     </>
