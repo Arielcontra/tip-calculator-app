@@ -22,6 +22,7 @@ h3
     flex-direction: column
     align-items: center
     justify-content: center
+    overflow: hidden
 
     .header
         // background-color: rgba(255,0,0,0.3)
@@ -52,7 +53,7 @@ h3
             flex-wrap: wrap
 
             .slider
-                background-color: rgba(255,0,0,0.3)
+                // background-color: rgba(255,0,0,0.3)
                 // min-width: 300px
                 width: 30vw
                 height: 65vh
@@ -63,19 +64,21 @@ h3
                 justify-content: space-between
 
                 .wrapperBill
-                    background-color: rgba(255,0,0,0.3)
+                    // background-color: rgba(255,0,0,0.3)
                     width: 100%
-                    height: 13vh
+                    height: 20%
                     align-self: flex-start
+                    position: relative
+
                     .bill
                         // background-color: rgba(255,222,0,0.2)
                         width: 4vw
-                        height: 4vh
+                        height: 30%
 
                     .totalBill
                         background-color: hsl(189, 41%, 97%)
                         width: 100%
-                        height: 8vh
+                        height: 70%
                         margin-top: 0.2rem
                         border-radius: 5px
                         text-align: right
@@ -84,17 +87,17 @@ h3
 
                     .iconDollar
                         // background-color: rgba(255,222,0,0.2)
-                        width: 1vw
+                        width: 4vw
                         height: 3vh
                         position: absolute
-                        margin-top: 1.2%
+                        margin-top: 5%
                         margin-left: 1.3rem
 
                 .wrapperSelectTip
                     // background-color: rgba(255,0,0,0.3)
                     width: 100%
                     height: 23vh
-                    align-self: center
+                    // align-self: center
 
                     .selectTip
                         // background-color: rgba(255,0,0,0.3)
@@ -133,11 +136,11 @@ h3
                             color: hsl(183, 100%, 15%)
 
                         .custom
-                            background-color: hsl(0, 0%, 100%)
+                            background-color: hsl(189, 41%, 97%)
                             width: 30%
                             height: 41%
                             border-radius: 5px
-                            text-align: right
+                            text-align: center
                             font-size: 24px
                             color: hsl(183, 100%, 15%)
                             border: 2px solid transparent
@@ -163,13 +166,14 @@ h3
                 .wrapperPeople
                     // background-color: rgba(255,0,0,0.3)
                     width: 100%
-                    height: 12vh
+                    height: 20%
                     align-self: flex-end
+                    position: relative
 
                     .textPeople
                         // background-color: rgba(255,0,0,0.3)
                         width: 100%
-                        height: 5vh
+                        height: 30%
                         display: flex
                         // align-items: center
                         justify-content: space-between
@@ -177,12 +181,12 @@ h3
                         .numberOfPeople
                             // background-color: rgba(255,222,0,0.2)
                             width: 60%
-                            height: 4vh
+                            height: 100%
 
                         .cantBeZero
                             // background-color: rgba(255,222,0,0.2)
                             width: 40%
-                            height: 4vh
+                            height: 100%
                             text-align: right
 
                         .locked
@@ -191,8 +195,7 @@ h3
                     .people
                         background-color: hsl(189, 41%, 97%)
                         width: 100%
-                        height: 8vh
-                        // margin-top: 0.2rem
+                        height: 70%
                         border-radius: 5px
                         text-align: right
                         font-size: 24px
@@ -201,7 +204,7 @@ h3
                     .peopleBorder
                         background-color: hsl(189, 41%, 97%)
                         width: 100%
-                        height: 8vh
+                        height: 70%
                         margin-top: 0.2rem
                         border-radius: 5px
                         text-align: right
@@ -213,7 +216,7 @@ h3
                         width: 1.1vw
                         height: 3vh
                         position: absolute
-                        margin-top: 1%
+                        margin-top: 5%
                         margin-left: 1.2rem
 
             .display
@@ -236,7 +239,7 @@ h3
                     .wrapperResult
                         // background-color: rgba(255,0,0,0.3)
                         width: 100%
-                        height: 22.6vh
+                        height: 40%
                         display: flex
                         flex-direction: column
                         justify-content: space-between
@@ -307,7 +310,6 @@ h3
                         border: none
 
     .attribution
-        background-color: rgba(255,222,0,0.2)
         text-decoration: none
         color: black
         font-size: 20px
@@ -329,14 +331,15 @@ h3
             height: auto
             text-decoration: none
 
+
+
+
     @media (max-width: 480px)
+        .header
+            height: auto
         .modal
             width: 100vw
             height: 100vh
-            display: flex
-            flex-direction: column
-            align-items: center
-            justify-content: center
 
             .wrapperSlider-Display
                 width: 100%
@@ -345,14 +348,202 @@ h3
                 flex-direction: column
                 align-items: center
                 justify-content: space-between
+
                 .slider
                     width: 95%
-                    height: 60%
+                    height: 50%
                     margin: 0
 
+                    .wrapperBill
+                        height: 19%
+
+                        .bill
+                            height: 40%
+
+                        .totalBill
+                            height: 60%
+
+                        .iconDollar
+                            margin-top: 3%
+
+                    .wrapperSelectTip
+                        height: 23vh
+
+                        .wrapperButtons
+                            height: 22vh
+
+                            .button
+                                width: 48%
+                                height: 29%
+
+                            .selected
+                                width: 48%
+                                height: 29%
+
+                            .custom
+                                width: 47%
+                                height: 26%
+
+                            .selectedCustom
+                                width: 47%
+                                height: 26%
+
+                    .wrapperPeople
+                        height: 18%
+                        margin-top: 2%
+
+                        .textPeople
+                            height: 40%
+
+                        .people
+                            height: 60%
+
+                        .iconPerson
+                            margin-top: 4%
+
                 .display
-                    background-color: hsl(183, 100%, 15%)
                     width: 100%
-                    height: 40%
+                    height: 45%
+
         .attribution
             text-align: center
+            font-size: 15px
+            width: 80%
+            // word-spacing: 1px
+            height: auto
+            // display: none
+
+
+
+
+
+    @media ( max-width: 800px) and (orientation: landscape)
+        .header
+            height: auto
+
+        .modal
+            width: 90vw
+
+            .wrapperSlider-Display
+                width: 100%
+                display: flex
+                align-items: center
+                justify-content: space-around
+
+                .slider
+                    width: 40%
+
+                    .wrapperBill
+                        height: 25%
+
+                        .bill
+                            height: 40%
+
+                        .totalBill
+                            height: 60%
+
+                            .iconDollar
+                                margin-top: 3%
+
+                    .wrapperPeople
+                        height: 25%
+                        margin-top: 2%
+
+                        .textPeople
+                            height: 40%
+
+                        .people
+                            height: 60%
+
+                        peopleBorder
+                            height: 60%
+
+                .display
+                    width: 55%
+
+                    .wrapperDisplayTip
+                        font-size: 50%
+  
+        .attribution
+            text-align: center
+            font-size: 15px
+            width: 80%
+            height: auto
+
+
+
+
+    @media (max-width: 960px) and (orientation: portrait)
+        
+        .modal
+            width: 80vw
+            height: 80vh
+
+            .wrapperSlider-Display
+                width: 90%
+                height: 90%
+                display: flex
+                flex-direction: column
+                align-items: center
+                justify-content: space-between
+
+                .slider
+                    width: 95%
+                    height: 50%
+                    margin: 0
+
+                    .wrapperBill
+                        height: 25%
+
+                        .bill
+                            height: 30%
+
+                        .totalBill
+                            height: 70%
+
+                        .iconDollar
+                            margin-top: 3%
+
+                    .wrapperSelectTip
+                        height: 21vh
+
+                        .wrapperButtons
+                            height: 18vh
+
+                            .button
+                                width: 48%
+                                height: 29%
+
+                            .selected
+                                width: 48%
+                                height: 29%
+
+                            .custom
+                                width: 47%
+                                height: 26%
+
+                            .selectedCustom
+                                width: 47%
+                                height: 26%
+
+                    .wrapperPeople
+                        height: 25%
+                        margin-top: 1%
+
+                        .textPeople
+                            height: 30%
+
+                        .people
+                            height: 70%
+
+                        .iconPerson
+                            margin-top: 4%
+
+                .display
+                    width: 100%
+                    height: 45%
+
+        .attribution
+            text-align: center
+            font-size: 15px
+            width: 80%
