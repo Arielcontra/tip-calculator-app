@@ -2,7 +2,7 @@ import './index.sass'
 import Slider from './components/slider'
 import Display from "./components/display"
 import gitHub from './assets/images/github-mark.png'
-import logo from './assets/images/logo.svg'
+// import logo from './assets/images/logo.svg'
 
 function App() {
 
@@ -10,7 +10,8 @@ function App() {
     <>
       <div className='wrapperApp'>
         <header className='header'>
-          <img src={logo} alt="Logo splitter" />
+          {/* <img src={logo} alt="Logo splitter" /> */}
+          <h1>SPLIT THE BILL</h1>
         </header>
         <div className='modal'>
           <div className="wrapperSlider-Display">
