@@ -8,14 +8,21 @@ body
     background-color: hsl(185, 41%, 84%)
 
 p
+    font-size: clamp(0.8rem, 1vw, 1rem)
+    letter-spacing: 0.5px
     color: hsl(184, 14%, 56%)
 
+h1
+    font-size: clamp(2rem, 4vw, 4rem)
+
 h2
-    font-size: 2.5em
+    font-size: clamp(1.9rem, 3.5vw, 2.5rem)
     text-align: right
     color: hsl(172, 67%, 45%)
 
-h3
+h5
+    font-size: clamp(0.9rem, 1.5vw, 1.3rem)
+    letter-spacing: 0.5px
     color: hsl(0, 0%, 100%)
 
 .wrapperApp
@@ -23,7 +30,7 @@ h3
     width: 100vw
     height: 100vh
     max-width: 1400px
-    min-width: 350px
+    min-width: 280px
     display: flex
     flex-direction: column
     align-items: center
@@ -31,8 +38,6 @@ h3
     overflow: hidden
 
     .header
-        // background-color: rgba(255,0,0,0.3)
-        // width: 10vw
         height: 10vh
         display: flex
         flex-direction: column
@@ -49,7 +54,6 @@ h3
         justify-content: center
 
         .wrapperSlider-Display
-            // background-color: rgba(255,0,0,0.3)
             width: 67vw
             height: 70vh
             display: flex
@@ -58,7 +62,6 @@ h3
             flex-wrap: wrap
 
             .slider
-                // background-color: rgba(255,0,0,0.3)
                 width: 30vw
                 height: 65vh
                 margin-left: 0.9rem
@@ -68,14 +71,12 @@ h3
                 justify-content: space-between
 
                 .wrapperBill
-                    // background-color: rgba(255,0,0,0.3)
                     width: 100%
                     height: 20%
                     align-self: flex-start
                     position: relative
 
                     .bill
-                        // background-color: rgba(255,222,0,0.2)
                         width: 4vw
                         height: 30%
 
@@ -90,7 +91,6 @@ h3
                         border: none
 
                     .iconDollar
-                        // background-color: rgba(255,222,0,0.2)
                         width: 4vw
                         height: 3vh
                         position: absolute
@@ -98,18 +98,14 @@ h3
                         margin-left: 1.3rem
 
                 .wrapperSelectTip
-                    // background-color: rgba(255,0,0,0.3)
                     width: 100%
                     height: 23vh
-                    // align-self: center
 
                     .selectTip
-                        // background-color: rgba(255,0,0,0.3)
                         width: 100%
                         height: 3.5vh
 
                     .wrapperButtons
-                        // background-color: rgba(255,0,0,0.3)
                         width: 100%
                         height: 20vh
                         display: flex
@@ -168,26 +164,22 @@ h3
                             border-color: hsl(185, 41%, 84%)
 
                 .wrapperPeople
-                    // background-color: rgba(255,0,0,0.3)
                     width: 100%
                     height: 20%
                     align-self: flex-end
                     position: relative
 
                     .textPeople
-                        // background-color: rgba(255,0,0,0.3)
                         width: 100%
                         height: 30%
                         display: flex
                         justify-content: space-between
 
                         .numberOfPeople
-                            // background-color: rgba(255,222,0,0.2)
                             width: 60%
                             height: 100%
 
                         .cantBeZero
-                            // background-color: rgba(255,222,0,0.2)
                             width: 40%
                             height: 100%
                             text-align: right
@@ -198,7 +190,7 @@ h3
                     .people
                         background-color: hsl(189, 41%, 97%)
                         width: 100%
-                        height: 70%
+                        height: 65%
                         border-radius: 0.3125rem
                         text-align: right
                         font-size: 1.5em
@@ -215,7 +207,6 @@ h3
                         border: 0.1250rem solid red
 
                     .iconPerson
-                        // background-color: rgba(255,222,0,0.2)
                         width: 1.1vw
                         height: 3vh
                         position: absolute
@@ -232,7 +223,6 @@ h3
                 justify-content: center
 
                 .wrapperItems
-                    // background-color: rgba(0, 0, 255, 0.238)
                     width: 90%
                     height: 80%
                     display: flex
@@ -240,7 +230,6 @@ h3
                     justify-content: space-between
 
                     .wrapperResult
-                        // background-color: rgba(255,0,0,0.3)
                         width: 100%
                         height: 40%
                         display: flex
@@ -248,44 +237,33 @@ h3
                         justify-content: space-between
 
                         .wrapperTip
-                            // background-color: rgba(255,222,0,0.2)
                             width: 100%
                             height: 8vh
                             display: flex
                             justify-content: space-between
 
                             .tipAmount
-                                // background-color: rgba(15, 23, 13, 0.2)
                                 width: 40%
                                 height: 8vh
 
                             .wrapperDisplayTip
-                                // background-color: rgba(47, 255, 0, 0.2)
                                 width: 60%
                                 height: 8vh
-                                // font-size: 1.5em
-                                
 
                         .wrapperTotal
-                            // background-color: rgba(255,222,0,0.2)
                             width: 100%
                             height: 8vh
                             display: flex
                             justify-content: space-between
 
                             .total
-                                // background-color: rgba(47, 255, 0, 0.2)
                                 width: 30%
                                 height: 7.5vh
                                 align-self: flex-start
 
                             .wrapperDisplayTotal
-                                // background-color: rgba(47, 255, 0, 0.2)
                                 width: 70%
                                 height: 8vh
-                                // text-align: right
-                                // font-size: 1.5rem
-                                // color: hsl(172, 67%, 45%)
 
                     .buttonReset
                         background-color: hsl(172, 67%, 45%)
@@ -301,7 +279,6 @@ h3
                             cursor: pointer
 
                     .oculto
-
                         opacity: 10%
                         background-color: hsl(172, 67%, 45%)
                         width: 100%
@@ -315,7 +292,6 @@ h3
         text-decoration: none
         color: black
         font-size: 0.9375em
-        // width: 60%
         height: 8vh
         display: flex
         flex-direction: column
@@ -333,12 +309,11 @@ h3
             height: auto
             text-decoration: none
 
-
-
     @media (max-width: 480px)
 
         .header
             height: auto
+
         .modal
             width: 100vw
             height: 100vh
@@ -407,14 +382,9 @@ h3
                     width: 100%
                     height: 40%
 
-                    
-
         .attribution
             text-align: center
             height: auto
-
-
-
 
     @media ( max-width: 915px) and (orientation: landscape)
         .header
@@ -444,14 +414,12 @@ h3
                             .iconDollar
                                 margin-top: 3%
 
-
                     .wrapperSelectTip
                         height: 25vh
-                        
-                          
+
                         .wrapperButtons
                             margin-top: 0.6rem
-                        
+
                     .wrapperPeople
                         height: 25%
                         margin-top: 2%
@@ -468,12 +436,9 @@ h3
                 .display
                     width: 50%
 
-                    
-
         .attribution
             text-align: center
             height: auto
-
 
     @media (min-width: 480px) and (max-width: 960px) and (orientation: portrait)
 
@@ -547,5 +512,3 @@ h3
 
         .attribution
             text-align: center
-            // font-size: 15px
-            // width: 80%

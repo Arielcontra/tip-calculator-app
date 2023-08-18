@@ -30,7 +30,7 @@ function Display() {
                 <div className="wrapperResult">
                     <div className="wrapperTip">
                         <div className="tipAmount">
-                            <h3 className="h3">Tip Amount</h3>
+                            <h5 className="h3">Tip Amount</h5>
                             <p>/ person</p>
                         </div>
                         <div className="wrapperDisplayTip">
@@ -39,7 +39,7 @@ function Display() {
                     </div>
                     <div className="wrapperTotal">
                         <div className="total">
-                            <h3 className="h3">Total</h3>
+                            <h5 className="h3">Total</h5>
                             <p>/ person</p>
                         </div>
                         <div className="wrapperDisplayTotal">
