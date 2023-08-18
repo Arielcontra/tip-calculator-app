@@ -34,7 +34,7 @@ function Display() {
                             <p>/ person</p>
                         </div>
                         <div className="wrapperDisplayTip">
-                            <h1 className="displayTip">{tip > 0 ? tip.toFixed(2) : '0,00'}</h1>
+                            <h2 className="displayTip">{tip > 0 ? tip.toFixed(2) : '0,00'}</h2>
                         </div>
                     </div>
                     <div className="wrapperTotal">
@@ -43,7 +43,7 @@ function Display() {
                             <p>/ person</p>
                         </div>
                         <div className="wrapperDisplayTotal">
-                            <h1 className="displayTotal">{total > 0 ? total.toFixed(2) : '0,00'}</h1>
+                            <h2 className="displayTotal">{total > 0 ? total.toFixed(2) : '0,00'}</h2>
                         </div>
                     </div>
                 </div>
