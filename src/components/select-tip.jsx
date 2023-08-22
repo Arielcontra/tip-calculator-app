@@ -1,10 +1,10 @@
 import { useContext, useEffect } from 'react'
 import { ConfigContext } from '../config-provider'
+import Button from './Button'
 
 function SelectTip() {
 
     const { valueTip, setValueTip, customValue, setCustomValue, reset } = useContext(ConfigContext)
-
 
     const handleClick = buttonId => {
         setValueTip(buttonId)
@@ -24,28 +24,37 @@ function SelectTip() {
         }
     }, [reset]);
 
-
     return (
         <div className="wrapperSelectTip">
             <div className="selectTip">
                 <p>Select Tip %</p>
             </div>
             <div className="wrapperButtons">
-                <button onClick={() => handleClick(5)} className={valueTip === 5 ? 'selected' : 'button'}>
-                    5%
-                </button>
-                <button onClick={() => handleClick(10)} className={valueTip === 10 ? 'selected' : 'button'}>
-                    10%
-                </button>
-                <button onClick={() => handleClick(15)} className={valueTip === 15 ? 'selected' : 'button'}>
-                    15%
-                </button>
-                <button onClick={() => handleClick(25)} className={valueTip === 25 ? 'selected' : 'button'}>
-                    25%
-                </button>
-                <button onClick={() => handleClick(50)} className={valueTip === 50 ? 'selected' : 'button'}>
-                    50%
-                </button>
+                <Button
+                    onClickFunction={() => handleClick(5)}
+                    buttonClass={valueTip === 5 ? 'selected' : 'button'}
+                    tipNumber="5"
+                />
+                <Button
+                    onClickFunction={() => handleClick(10)}
+                    buttonClass={valueTip === 10 ? 'selected' : 'button'}
+                    tipNumber="10"
+                />
+                <Button
+                    onClickFunction={() => handleClick(15)}
+                    buttonClass={valueTip === 15 ? 'selected' : 'button'}
+                    tipNumber="15"
+                />
+                <Button
+                    onClickFunction={() => handleClick(25)}
+                    buttonClass={valueTip === 25 ? 'selected' : 'button'}
+                    tipNumber="25"
+                />
+                <Button
+                    onClickFunction={() => handleClick(50)}
+                    buttonClass={valueTip === 50 ? 'selected' : 'button'}
+                    tipNumber="50"
+                />
                 <input type="number" placeholder="Custom" value={customValue} onChange={handleCustomChange}
                     className={customValue !== '' ? 'selectedCustom' : 'custom'}
                 />

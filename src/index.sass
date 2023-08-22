@@ -73,29 +73,37 @@ h5
                 .wrapperBill
                     width: 100%
                     height: 20%
-                    align-self: flex-start
+                    align-self: flex-end
                     position: relative
+                    justify-content: space-between
+                    border: none
+                    display: block
 
                     .bill
                         width: 4vw
-                        height: 30%
+                        height: 35%
+                        font-size: clamp(0.8rem, 1vw, 1rem)
+                        letter-spacing: 0.5px
+                        color: hsl(184, 14%, 56%)
 
                     .totalBill
                         background-color: hsl(189, 41%, 97%)
                         width: 100%
-                        height: 70%
+                        height: 65%
                         margin-top: 0.2rem
                         border-radius: 0.3125rem
                         text-align: right
                         font-size: 1.5em
-                        border: none
+                        border: 0.1250rem solid transparent
+
+                        &:focus
+                            border: 0.1250rem solid hsl(185, 41%, 84%)
+                            outline: none
 
                     .iconDollar
-                        width: 4vw
-                        height: 3vh
                         position: absolute
-                        margin-top: 5%
-                        margin-left: 1.3rem
+                        top: 60%
+                        left: 1.25rem
 
                 .wrapperSelectTip
                     width: 100%
@@ -168,12 +176,18 @@ h5
                     height: 20%
                     align-self: flex-end
                     position: relative
+                    justify-content: space-between
+                    border: none
+                    display: block
 
                     .textPeople
                         width: 100%
-                        height: 30%
+                        height: 35%
                         display: flex
                         justify-content: space-between
+                        font-size: clamp(0.8rem, 1vw, 1rem)
+                        letter-spacing: 0.5px
+                        color: hsl(184, 14%, 56%)
 
                         .numberOfPeople
                             width: 60%
@@ -194,7 +208,12 @@ h5
                         border-radius: 0.3125rem
                         text-align: right
                         font-size: 1.5em
-                        border: none
+                        border: 0.1250rem solid transparent
+                        transition: border-color 0.3s ease-in-out
+
+                        &:focus
+                            border: 0.1250rem solid hsl(185, 41%, 84%)
+                            outline: none
 
                     .peopleBorder
                         background-color: hsl(189, 41%, 97%)
@@ -205,13 +224,13 @@ h5
                         text-align: right
                         font-size: 1.5em
                         border: 0.1250rem solid red
+                        transition: border-color 0.3s ease-in-out
+                        outline: none
 
                     .iconPerson
-                        width: 1.1vw
-                        height: 3vh
                         position: absolute
-                        margin-top: 5%
-                        margin-left: 1.2rem
+                        top: 60%
+                        left: 1.25rem
 
             .display
                 background-color: hsl(183, 100%, 15%)
@@ -257,8 +276,8 @@ h5
                             justify-content: space-between
 
                             .total
-                                width: 30%
-                                height: 7.5vh
+                                width: 40%
+                                height: 8vh
                                 align-self: flex-start
 
                             .wrapperDisplayTotal
@@ -340,9 +359,6 @@ h5
                         .totalBill
                             height: 60%
 
-                        .iconDollar
-                            margin-top: 3%
-
                     .wrapperSelectTip
                         height: 23vh
 
@@ -367,16 +383,12 @@ h5
 
                     .wrapperPeople
                         height: 18%
-                        margin-top: 2%
 
                         .textPeople
                             height: 40%
 
                         .people
                             height: 60%
-
-                        .iconPerson
-                            margin-top: 4%
 
                 .display
                     width: 100%
@@ -411,9 +423,6 @@ h5
                         .totalBill
                             height: 60%
 
-                            .iconDollar
-                                margin-top: 3%
-
                     .wrapperSelectTip
                         height: 25vh
 
@@ -422,7 +431,6 @@ h5
 
                     .wrapperPeople
                         height: 25%
-                        margin-top: 2%
 
                         .textPeople
                             height: 40%
@@ -466,13 +474,11 @@ h5
                             height: 30%
 
                         .totalBill
-                            height: 70%
-
-                        .iconDollar
-                            margin-top: 3%
+                            height: 60%
 
                     .wrapperSelectTip
                         height: 21vh
+                        margin-top: 2%
 
                         .wrapperButtons
                             height: 18vh
@@ -495,16 +501,13 @@ h5
 
                     .wrapperPeople
                         height: 25%
-                        margin-top: 1%
 
                         .textPeople
                             height: 30%
+                            margin-bottom: 1%
 
                         .people
-                            height: 70%
-
-                        .iconPerson
-                            margin-top: 4%
+                            height: 60%
 
                 .display
                     width: 100%

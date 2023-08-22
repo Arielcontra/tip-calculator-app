@@ -1,5 +1,6 @@
 import { useContext } from 'react'
 import { ConfigContext } from '../config-provider'
+import DisplayComponent from './DisplayComponent'
 
 function Display() {
 
@@ -23,29 +24,26 @@ function Display() {
     const showButton = !(spent > 0 || totalPeople > 0 || valueTip > 0 || customValue > 0)
     setButtonLocked(showButton)
 
-
     return (
         <div className="display">
             <div className="wrapperItems">
                 <div className="wrapperResult">
-                    <div className="wrapperTip">
-                        <div className="tipAmount">
-                            <h5 className="h3">Tip Amount</h5>
-                            <p>/ person</p>
-                        </div>
-                        <div className="wrapperDisplayTip">
-                            <h2 className="displayTip">{tip > 0 ? tip.toFixed(2) : '0,00'}</h2>
-                        </div>
-                    </div>
-                    <div className="wrapperTotal">
-                        <div className="total">
-                            <h5 className="h3">Total</h5>
-                            <p>/ person</p>
-                        </div>
-                        <div className="wrapperDisplayTotal">
-                            <h2 className="displayTotal">{total > 0 ? total.toFixed(2) : '0,00'}</h2>
-                        </div>
-                    </div>
+                    <DisplayComponent
+                        wrapperFatherClass="wrapperTip"
+                        wrapperChildOneClass="tipAmount"
+                        description="Tip Amount"
+                        wrapperChildTwoClass="wrapperDisplayTip"
+                        textResultClass="displayTip"
+                        textResult={tip > 0 ? tip.toFixed(2) : '0,00'}
+                    />
+                    <DisplayComponent
+                        wrapperFatherClass="wrapperTotal"
+                        wrapperChildOneClass="total"
+                        description="Total"
+                        wrapperChildTwoClass="wrapperDisplayTotal"
+                        textResultClass="displayTotal"
+                        textResult={total > 0 ? total.toFixed(2) : '0,00'}
+                    />
                 </div>
                 <button type='reset' onClick={handleClick} className={buttonLocked ? 'oculto' : 'buttonReset'} >RESET</button>
             </div>
