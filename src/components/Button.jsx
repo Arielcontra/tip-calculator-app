@@ -1,6 +1,6 @@
-function Button ({onClickFunction, buttonClass, tipNumber}) {
-    return(
-        <button onClick={onClickFunction} className={buttonClass}>{tipNumber}%</button>
+function Button({ onClickFunction, buttonClass, text }) {
+    return (
+        <button onClick={onClickFunction} className={buttonClass}>{text}</button>
     )
 }
 

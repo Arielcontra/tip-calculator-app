@@ -33,27 +33,27 @@ function SelectTip() {
                 <Button
                     onClickFunction={() => handleClick(5)}
                     buttonClass={valueTip === 5 ? 'selected' : 'button'}
-                    tipNumber="5"
+                    text="5%"
                 />
                 <Button
                     onClickFunction={() => handleClick(10)}
                     buttonClass={valueTip === 10 ? 'selected' : 'button'}
-                    tipNumber="10"
+                    text="10%"
                 />
                 <Button
                     onClickFunction={() => handleClick(15)}
                     buttonClass={valueTip === 15 ? 'selected' : 'button'}
-                    tipNumber="15"
+                    text="15%"
                 />
                 <Button
                     onClickFunction={() => handleClick(25)}
                     buttonClass={valueTip === 25 ? 'selected' : 'button'}
-                    tipNumber="25"
+                    text="25%"
                 />
                 <Button
                     onClickFunction={() => handleClick(50)}
                     buttonClass={valueTip === 50 ? 'selected' : 'button'}
-                    tipNumber="50"
+                    text="50%"
                 />
                 <input type="number" placeholder="Custom" value={customValue} onChange={handleCustomChange}
                     className={customValue !== '' ? 'selectedCustom' : 'custom'}

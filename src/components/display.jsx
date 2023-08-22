@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { ConfigContext } from '../config-provider'
 import DisplayComponent from './DisplayComponent'
+import Button from './Button'
 
 function Display() {
 
@@ -45,7 +46,11 @@ function Display() {
                         textResult={total > 0 ? total.toFixed(2) : '0,00'}
                     />
                 </div>
-                <button type='reset' onClick={handleClick} className={buttonLocked ? 'oculto' : 'buttonReset'} >RESET</button>
+                <Button
+                    onClickFunction={handleClick}
+                    buttonClass={buttonLocked ? 'oculto' : 'buttonReset'}
+                    text="RESET"
+                />
             </div>
         </div>
     )
