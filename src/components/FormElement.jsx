@@ -1,4 +1,7 @@
-function FormElement({ fieldsetClass, wrapperTextClass, labelClass, textHtmlFor, textLabel, paragraphClass, colorParagraph, textParagraph, inputClass, inputValue, onChangeEvent, imageSource, textImg, imgClass }) {
+function FormElement({ fieldsetClass, wrapperTextClass, labelClass,
+    textHtmlFor, textLabel, paragraphClass, colorParagraph, textParagraph,
+    inputClass, inputValue, onChangeEvent, imageSource, textImg, imgClass
+}) {
 
     return (
         <fieldset className={fieldsetClass}>
@@ -6,7 +9,7 @@ function FormElement({ fieldsetClass, wrapperTextClass, labelClass, textHtmlFor,
                 <label className={labelClass} htmlFor={textHtmlFor}>{textLabel}</label>
                 <p className={paragraphClass} style={colorParagraph}>{textParagraph}</p>
             </div>
-            <input type="number"
+            <input type='number'
                 className={inputClass}
                 id={textHtmlFor}
                 placeholder='0'
@@ -15,7 +18,6 @@ function FormElement({ fieldsetClass, wrapperTextClass, labelClass, textHtmlFor,
             <img src={imageSource} alt={textImg} className={imgClass} />
         </fieldset>
     )
-
 }
 
 export default FormElement

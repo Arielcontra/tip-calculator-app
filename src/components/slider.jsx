@@ -7,7 +7,7 @@ function Slider() {
 
     return (
         <>
-            <div className="slider">
+            <div className='slider'>
                 <TotalBill />
                 <SelectTip />
                 <People />
@@ -15,4 +15,5 @@ function Slider() {
         </>
     )
 }
+
 export default Slider

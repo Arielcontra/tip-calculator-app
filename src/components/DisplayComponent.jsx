@@ -1,4 +1,7 @@
-function DisplayComponent({ wrapperFatherClass, wrapperChildOneClass, description, wrapperChildTwoClass, textResultClass, textResult }) {
+function DisplayComponent({ wrapperFatherClass, wrapperChildOneClass, description,
+    wrapperChildTwoClass, textResultClass, textResult
+}) {
+    
     return (
         <div className={wrapperFatherClass}>
             <div className={wrapperChildOneClass}>
@@ -11,4 +14,5 @@ function DisplayComponent({ wrapperFatherClass, wrapperChildOneClass, descriptio
         </div>
     )
 }
+
 export default DisplayComponent

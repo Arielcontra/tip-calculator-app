@@ -5,7 +5,10 @@ import Button from './Button'
 
 function Display() {
 
-    const { totalBill, valueTip, customValue, people, setReset, buttonLocked, setButtonLocked } = useContext(ConfigContext)
+    const {
+        totalBill, valueTip, customValue, people,
+        setReset, buttonLocked, setButtonLocked
+    } = useContext(ConfigContext)
 
     const spent = parseInt(totalBill)
     const selectTip = parseInt(valueTip)
@@ -15,8 +18,7 @@ function Display() {
     const tip = tipTotal / totalPeople
 
     const handleClick = () => {
-        setReset(true);
-
+        setReset(true)
         setTimeout(() => {
             setReset(false)
         }, 1000)
@@ -26,30 +28,30 @@ function Display() {
     setButtonLocked(showButton)
 
     return (
-        <div className="display">
-            <div className="wrapperItems">
-                <div className="wrapperResult">
+        <div className='display'>
+            <div className='wrapperItems'>
+                <div className='wrapperResult'>
                     <DisplayComponent
-                        wrapperFatherClass="wrapperTip"
-                        wrapperChildOneClass="tipAmount"
-                        description="Tip Amount"
-                        wrapperChildTwoClass="wrapperDisplayTip"
-                        textResultClass="displayTip"
+                        wrapperFatherClass='wrapperTip'
+                        wrapperChildOneClass='tipAmount'
+                        description='Tip Amount'
+                        wrapperChildTwoClass='wrapperDisplayTip'
+                        textResultClass='displayTip'
                         textResult={tip > 0 ? tip.toLocaleString('es-AR') : '0,00'}
                     />
                     <DisplayComponent
-                        wrapperFatherClass="wrapperTotal"
-                        wrapperChildOneClass="total"
-                        description="Total"
-                        wrapperChildTwoClass="wrapperDisplayTotal"
-                        textResultClass="displayTotal"
+                        wrapperFatherClass='wrapperTotal'
+                        wrapperChildOneClass='total'
+                        description='Total'
+                        wrapperChildTwoClass='wrapperDisplayTotal'
+                        textResultClass='displayTotal'
                         textResult={total > 0 ? total.toLocaleString('es-AR') : '0,00'}
                     />
                 </div>
                 <Button
                     onClickFunction={handleClick}
                     buttonClass={buttonLocked ? 'oculto' : 'buttonReset'}
-                    text="RESET"
+                    text='RESET'
                 />
             </div>
         </div>

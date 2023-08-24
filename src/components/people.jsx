@@ -3,7 +3,6 @@ import { ConfigContext } from '../config-provider'
 import FormElement from './FormElement'
 import IconPerson from '../assets/images/icon-person.svg'
 
-
 function People() {
     const { totalBill, valueTip, customValue, people, setPeople, reset } = useContext(ConfigContext)
 

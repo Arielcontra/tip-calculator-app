@@ -14,17 +14,18 @@ function TotalBill() {
 
     return (
         <FormElement
-            fieldsetClass="wrapperBill"
-            wrapperTextClass="bill"
-            textHtmlFor="bill"
-            textLabel="Bill"
-            inputClass="totalBill"
+            fieldsetClass='wrapperBill'
+            wrapperTextClass='bill'
+            textHtmlFor='bill'
+            textLabel='Bill'
+            inputClass='totalBill'
             inputValue={totalBill}
             onChangeEvent={handlebill}
             imageSource={iconDollar}
-            textImg="icon dollar"
-            imgClass="iconDollar"
+            textImg='icon dollar'
+            imgClass='iconDollar'
         />
     )
 }
+
 export default TotalBill
