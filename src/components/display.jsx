@@ -35,7 +35,7 @@ function Display() {
                         description="Tip Amount"
                         wrapperChildTwoClass="wrapperDisplayTip"
                         textResultClass="displayTip"
-                        textResult={tip > 0 ? tip.toFixed(2) : '0,00'}
+                        textResult={tip > 0 ? tip.toLocaleString() : '0,00'}
                     />
                     <DisplayComponent
                         wrapperFatherClass="wrapperTotal"
@@ -43,7 +43,7 @@ function Display() {
                         description="Total"
                         wrapperChildTwoClass="wrapperDisplayTotal"
                         textResultClass="displayTotal"
-                        textResult={total > 0 ? total.toFixed(2) : '0,00'}
+                        textResult={total > 0 ? total.toLocaleString() : '0,00'}
                     />
                 </div>
                 <Button

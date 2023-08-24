@@ -6,6 +6,7 @@
 
 body
     background-color: hsl(185, 41%, 84%)
+    overflow: hidden
 
 p
     font-size: clamp(0.8rem, 1vw, 1rem)
@@ -24,6 +25,10 @@ h5
     font-size: clamp(0.9rem, 1.5vw, 1.3rem)
     letter-spacing: 0.5px
     color: hsl(0, 0%, 100%)
+
+input
+    // text-indent: 10px
+    // padding-right: 20px
 
 .wrapperApp
 
@@ -80,6 +85,7 @@ h5
                     display: block
 
                     .bill
+                        display: block
                         width: 4vw
                         height: 35%
                         font-size: clamp(0.8rem, 1vw, 1rem)
@@ -88,13 +94,14 @@ h5
 
                     .totalBill
                         background-color: hsl(189, 41%, 97%)
-                        width: 100%
+                        width: 95%
                         height: 65%
                         margin-top: 0.2rem
                         border-radius: 0.3125rem
                         text-align: right
                         font-size: 1.5em
                         border: 0.1250rem solid transparent
+                        padding-right: 5%
 
                         &:focus
                             border: 0.1250rem solid hsl(185, 41%, 84%)
@@ -102,7 +109,8 @@ h5
 
                     .iconDollar
                         position: absolute
-                        top: 60%
+                        display: block
+                        top: 65%
                         left: 1.25rem
 
                 .wrapperSelectTip
@@ -203,13 +211,14 @@ h5
 
                     .people
                         background-color: hsl(189, 41%, 97%)
-                        width: 100%
+                        width: 95%
                         height: 65%
                         border-radius: 0.3125rem
                         text-align: right
                         font-size: 1.5em
                         border: 0.1250rem solid transparent
                         transition: border-color 0.3s ease-in-out
+                        padding-right: 5%
 
                         &:focus
                             border: 0.1250rem solid hsl(185, 41%, 84%)
@@ -217,7 +226,7 @@ h5
 
                     .peopleBorder
                         background-color: hsl(189, 41%, 97%)
-                        width: 100%
+                        width: 95%
                         height: 70%
                         margin-top: 0.2rem
                         border-radius: 0.3125rem
@@ -226,6 +235,7 @@ h5
                         border: 0.1250rem solid red
                         transition: border-color 0.3s ease-in-out
                         outline: none
+                        padding-right: 5%
 
                     .iconPerson
                         position: absolute
