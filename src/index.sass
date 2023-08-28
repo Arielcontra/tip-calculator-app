@@ -6,6 +6,13 @@
 
 body
     background-color: hsl(185, 41%, 84%)
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    overflow: hidden
 
 p
     font-size: clamp(0.8rem, 1vw, 1rem)
@@ -25,497 +32,490 @@ h5
     letter-spacing: 0.5px
     color: hsl(0, 0%, 100%)
 
-.wrapperApp
-    width: 100vw
-    height: 100vh
-    max-width: 1400px
-    min-width: 280px
+.header
+    height: 10vh
     display: flex
     flex-direction: column
     align-items: center
     justify-content: center
-    overflow: hidden
 
-    .header
-        height: 10vh
+.modal
+    background-color: hsl(0, 0%, 100%)
+    width: 72vw
+    height: 81vh
+    border-radius: 1.5625rem
+    display: flex
+    align-items: center
+    justify-content: center
+
+    .wrapperSlider-Display
+        width: 67vw
+        height: 70vh
         display: flex
-        flex-direction: column
         align-items: center
-        justify-content: center
+        justify-content: space-between
+        flex-wrap: wrap
 
-    .modal
-        background-color: hsl(0, 0%, 100%)
-        width: 72vw
-        height: 81vh
-        border-radius: 1.5625rem
-        display: flex
-        align-items: center
-        justify-content: center
-
-        .wrapperSlider-Display
-            width: 67vw
-            height: 70vh
+        .slider
+            width: 30vw
+            height: 65vh
+            margin-left: 0.9rem
             display: flex
+            flex-direction: column
             align-items: center
             justify-content: space-between
-            flex-wrap: wrap
 
-            .slider
-                width: 30vw
-                height: 65vh
-                margin-left: 0.9rem
+            .wrapperBill
+                width: 100%
+                height: 20%
+                align-self: flex-end
+                position: relative
+                justify-content: space-between
+                border: none
+                display: block
+
+                .bill
+                    display: block
+                    width: 4vw
+                    height: 35%
+                    font-size: clamp(0.8rem, 1vw, 1rem)
+                    letter-spacing: 0.5px
+                    color: hsl(184, 14%, 56%)
+
+                .totalBill
+                    background-color: hsl(189, 41%, 97%)
+                    width: 95%
+                    height: 65%
+                    margin-top: 0.2rem
+                    border-radius: 0.3125rem
+                    text-align: right
+                    font-size: 1.5em
+                    border: 0.1250rem solid transparent
+                    padding-right: 5%
+
+                    &:focus
+                        border: 0.1250rem solid hsl(185, 41%, 84%)
+                        outline: none
+
+                .iconDollar
+                    position: absolute
+                    display: block
+                    top: 65%
+                    left: 1.25rem
+
+            .wrapperSelectTip
+                width: 100%
+                height: 23vh
+
+                .selectTip
+                    width: 100%
+                    height: 3.5vh
+
+                .wrapperButtons
+                    width: 100%
+                    height: 20vh
+                    display: flex
+                    flex-wrap: wrap
+                    align-items: center
+                    justify-content: space-between
+
+                    .button
+                        background-color: hsl(183, 100%, 15%)
+                        width: 31%
+                        height: 42%
+                        border-radius: 0.3125rem
+                        font-size: 1.2em
+                        color: hsl(189, 41%, 97%)
+                        border: none
+
+                        &:hover
+                            cursor: pointer
+                            background-color: hsl(185, 41%, 84%)
+                            color: hsl(183, 100%, 15%)
+
+                    .selected
+                        background-color: hsl(185, 41%, 84%)
+                        width: 31%
+                        height: 42%
+                        border-radius: 0.3125rem
+                        font-size: 1.2em
+                        color: hsl(183, 100%, 15%)
+
+                    .custom
+                        background-color: hsl(189, 41%, 97%)
+                        width: 30%
+                        height: 41%
+                        border-radius: 0.3125rem
+                        text-align: center
+                        font-size: 1.2em
+                        color: hsl(183, 100%, 15%)
+                        border: 0.1250rem solid transparent
+                        transition: border-color 0.3s ease-in-out
+
+                        &:hover
+                            cursor: pointer
+                            border-color: hsl(185, 41%, 84%)
+                            color: hsl(183, 100%, 15%)
+
+                    .selectedCustom
+                        background-color: hsl(0, 0%, 100%)
+                        width: 30%
+                        height: 41%
+                        border-radius: 0.3125rem
+                        text-align: right
+                        font-size: 1.2em
+                        color: hsl(183, 100%, 15%)
+                        border: 0.1250rem solid transparent
+                        transition: border-color 0.3s ease-in-out
+                        border-color: hsl(185, 41%, 84%)
+
+            .wrapperPeople
+                width: 100%
+                height: 20%
+                align-self: flex-end
+                position: relative
+                justify-content: space-between
+                border: none
+                display: block
+
+                .textPeople
+                    width: 100%
+                    height: 35%
+                    display: flex
+                    justify-content: space-between
+                    font-size: clamp(0.8rem, 1vw, 1rem)
+                    letter-spacing: 0.5px
+                    color: hsl(184, 14%, 56%)
+
+                    .numberOfPeople
+                        width: 60%
+                        height: 100%
+
+                    .cantBeZero
+                        width: 40%
+                        height: 100%
+                        text-align: right
+
+                    .locked
+                        display: none
+
+                .people
+                    background-color: hsl(189, 41%, 97%)
+                    width: 95%
+                    height: 65%
+                    border-radius: 0.3125rem
+                    text-align: right
+                    font-size: 1.5em
+                    border: 0.1250rem solid transparent
+                    transition: border-color 0.3s ease-in-out
+                    padding-right: 5%
+
+                    &:focus
+                        border: 0.1250rem solid hsl(185, 41%, 84%)
+                        outline: none
+
+                .peopleBorder
+                    background-color: hsl(189, 41%, 97%)
+                    width: 95%
+                    height: 70%
+                    margin-top: 0.2rem
+                    border-radius: 0.3125rem
+                    text-align: right
+                    font-size: 1.5em
+                    border: 0.1250rem solid red
+                    transition: border-color 0.3s ease-in-out
+                    outline: none
+                    padding-right: 5%
+
+                .iconPerson
+                    position: absolute
+                    top: 60%
+                    left: 1.25rem
+
+        .display
+            background-color: hsl(183, 100%, 15%)
+            width: 32.3vw
+            height: 70vh
+            border-radius: 1.0625rem
+            display: flex
+            align-items: center
+            justify-content: center
+
+            .wrapperItems
+                width: 90%
+                height: 80%
                 display: flex
                 flex-direction: column
-                align-items: center
                 justify-content: space-between
 
-                .wrapperBill
+                .wrapperResult
                     width: 100%
-                    height: 20%
-                    align-self: flex-end
-                    position: relative
-                    justify-content: space-between
-                    border: none
-                    display: block
-
-                    .bill
-                        display: block
-                        width: 4vw
-                        height: 35%
-                        font-size: clamp(0.8rem, 1vw, 1rem)
-                        letter-spacing: 0.5px
-                        color: hsl(184, 14%, 56%)
-
-                    .totalBill
-                        background-color: hsl(189, 41%, 97%)
-                        width: 95%
-                        height: 65%
-                        margin-top: 0.2rem
-                        border-radius: 0.3125rem
-                        text-align: right
-                        font-size: 1.5em
-                        border: 0.1250rem solid transparent
-                        padding-right: 5%
-
-                        &:focus
-                            border: 0.1250rem solid hsl(185, 41%, 84%)
-                            outline: none
-
-                    .iconDollar
-                        position: absolute
-                        display: block
-                        top: 65%
-                        left: 1.25rem
-
-                .wrapperSelectTip
-                    width: 100%
-                    height: 23vh
-
-                    .selectTip
-                        width: 100%
-                        height: 3.5vh
-
-                    .wrapperButtons
-                        width: 100%
-                        height: 20vh
-                        display: flex
-                        flex-wrap: wrap
-                        align-items: center
-                        justify-content: space-between
-
-                        .button
-                            background-color: hsl(183, 100%, 15%)
-                            width: 31%
-                            height: 42%
-                            border-radius: 0.3125rem
-                            font-size: 1.2em
-                            color: hsl(189, 41%, 97%)
-                            border: none
-
-                            &:hover
-                                cursor: pointer
-                                background-color: hsl(185, 41%, 84%)
-                                color: hsl(183, 100%, 15%)
-
-                        .selected
-                            background-color: hsl(185, 41%, 84%)
-                            width: 31%
-                            height: 42%
-                            border-radius: 0.3125rem
-                            font-size: 1.2em
-                            color: hsl(183, 100%, 15%)
-
-                        .custom
-                            background-color: hsl(189, 41%, 97%)
-                            width: 30%
-                            height: 41%
-                            border-radius: 0.3125rem
-                            text-align: center
-                            font-size: 1.2em
-                            color: hsl(183, 100%, 15%)
-                            border: 0.1250rem solid transparent
-                            transition: border-color 0.3s ease-in-out
-
-                            &:hover
-                                cursor: pointer
-                                border-color: hsl(185, 41%, 84%)
-                                color: hsl(183, 100%, 15%)
-
-                        .selectedCustom
-                            background-color: hsl(0, 0%, 100%)
-                            width: 30%
-                            height: 41%
-                            border-radius: 0.3125rem
-                            text-align: right
-                            font-size: 1.2em
-                            color: hsl(183, 100%, 15%)
-                            border: 0.1250rem solid transparent
-                            transition: border-color 0.3s ease-in-out
-                            border-color: hsl(185, 41%, 84%)
-
-                .wrapperPeople
-                    width: 100%
-                    height: 20%
-                    align-self: flex-end
-                    position: relative
-                    justify-content: space-between
-                    border: none
-                    display: block
-
-                    .textPeople
-                        width: 100%
-                        height: 35%
-                        display: flex
-                        justify-content: space-between
-                        font-size: clamp(0.8rem, 1vw, 1rem)
-                        letter-spacing: 0.5px
-                        color: hsl(184, 14%, 56%)
-
-                        .numberOfPeople
-                            width: 60%
-                            height: 100%
-
-                        .cantBeZero
-                            width: 40%
-                            height: 100%
-                            text-align: right
-
-                        .locked
-                            display: none
-
-                    .people
-                        background-color: hsl(189, 41%, 97%)
-                        width: 95%
-                        height: 65%
-                        border-radius: 0.3125rem
-                        text-align: right
-                        font-size: 1.5em
-                        border: 0.1250rem solid transparent
-                        transition: border-color 0.3s ease-in-out
-                        padding-right: 5%
-
-                        &:focus
-                            border: 0.1250rem solid hsl(185, 41%, 84%)
-                            outline: none
-
-                    .peopleBorder
-                        background-color: hsl(189, 41%, 97%)
-                        width: 95%
-                        height: 70%
-                        margin-top: 0.2rem
-                        border-radius: 0.3125rem
-                        text-align: right
-                        font-size: 1.5em
-                        border: 0.1250rem solid red
-                        transition: border-color 0.3s ease-in-out
-                        outline: none
-                        padding-right: 5%
-
-                    .iconPerson
-                        position: absolute
-                        top: 60%
-                        left: 1.25rem
-
-            .display
-                background-color: hsl(183, 100%, 15%)
-                width: 32.3vw
-                height: 70vh
-                border-radius: 1.0625rem
-                display: flex
-                align-items: center
-                justify-content: center
-
-                .wrapperItems
-                    width: 90%
-                    height: 80%
+                    height: 40%
                     display: flex
                     flex-direction: column
                     justify-content: space-between
 
-                    .wrapperResult
+                    .wrapperTip
                         width: 100%
-                        height: 40%
+                        height: 8vh
                         display: flex
-                        flex-direction: column
                         justify-content: space-between
 
-                        .wrapperTip
-                            width: 100%
+                        .tipAmount
+                            width: 40%
                             height: 8vh
-                            display: flex
-                            justify-content: space-between
 
-                            .tipAmount
-                                width: 40%
-                                height: 8vh
-
-                            .wrapperDisplayTip
-                                width: 60%
-                                height: 8vh
-
-                        .wrapperTotal
-                            width: 100%
+                        .wrapperDisplayTip
+                            width: 60%
                             height: 8vh
-                            display: flex
-                            justify-content: space-between
 
-                            .total
-                                width: 40%
-                                height: 8vh
-                                align-self: flex-start
-
-                            .wrapperDisplayTotal
-                                width: 70%
-                                height: 8vh
-
-                    .buttonReset
-                        background-color: hsl(172, 67%, 45%)
+                    .wrapperTotal
                         width: 100%
-                        height: 15%
-                        border-radius: 0.3125rem
-                        font-size: 1.2em
-                        color: hsl(183, 100%, 15%)
-                        border: none
+                        height: 8vh
+                        display: flex
+                        justify-content: space-between
 
-                        &:hover
-                            background-color: hsl(185, 41%, 84%)
-                            cursor: pointer
+                        .total
+                            width: 40%
+                            height: 8vh
+                            align-self: flex-start
 
-                    .oculto
-                        opacity: 10%
-                        background-color: hsl(172, 67%, 45%)
-                        width: 100%
-                        height: 15%
-                        border-radius: 0.3125rem
-                        font-size: 1.2em
-                        color: hsl(183, 100%, 15%)
-                        border: none
+                        .wrapperDisplayTotal
+                            width: 70%
+                            height: 8vh
+
+                .buttonReset
+                    background-color: hsl(172, 67%, 45%)
+                    width: 100%
+                    height: 15%
+                    border-radius: 0.3125rem
+                    font-size: 1.2em
+                    color: hsl(183, 100%, 15%)
+                    border: none
+
+                    &:hover
+                        background-color: hsl(185, 41%, 84%)
+                        cursor: pointer
+
+                .oculto
+                    opacity: 10%
+                    background-color: hsl(172, 67%, 45%)
+                    width: 100%
+                    height: 15%
+                    border-radius: 0.3125rem
+                    font-size: 1.2em
+                    color: hsl(183, 100%, 15%)
+                    border: none
+
+.attribution
+    text-decoration: none
+    color: black
+    font-size: 0.9375em
+    height: 8vh
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    .link
+        color: black
+
+    a
+        color: black
+        text-decoration: none
+
+    .logoGitHub
+        width: 1.25rem
+        height: auto
+        text-decoration: none
+
+@media (max-width: 480px)
+
+    .header
+        height: auto
+
+    .modal
+        width: 100vw
+        height: 85vh
+
+        .wrapperSlider-Display
+            width: 100%
+            height: 95%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+
+            .slider
+                width: 90%
+                height: 55%
+                margin: 0
+
+                .wrapperBill
+                    height: 19%
+
+                    .bill
+                        height: 40%
+
+                    .totalBill
+                        height: 60%
+
+                .wrapperSelectTip
+                    height: 23vh
+
+                    .wrapperButtons
+                        height: 22vh
+
+                        .button
+                            width: 48%
+                            height: 29%
+
+                        .selected
+                            width: 48%
+                            height: 29%
+
+                        .custom
+                            width: 47%
+                            height: 26%
+
+                        .selectedCustom
+                            width: 47%
+                            height: 26%
+
+                .wrapperPeople
+                    height: 18%
+
+                    .textPeople
+                        height: 40%
+
+                    .people
+                        height: 60%
+
+            .display
+                width: 100%
+                height: 40%
 
     .attribution
-        text-decoration: none
-        color: black
-        font-size: 0.9375em
-        height: 8vh
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
+        text-align: center
+        height: auto
 
-        .link
-            color: black
-        a
-            color: black
-            text-decoration: none
+@media ( max-width: 915px) and (orientation: landscape)
 
-        .logoGitHub
-            width: 1.25rem
-            height: auto
-            text-decoration: none
+    .header
+        height: auto
 
-    @media (max-width: 480px)
+    .modal
+        width: 90vw
+        height: 75vh
 
-        .header
-            height: auto
+        .wrapperSlider-Display
+            width: 100%
+            display: flex
+            align-items: center
+            justify-content: space-around
 
-        .modal
-            width: 100vw
-            height: 100vh
+            .slider
+                width: 40%
 
-            .wrapperSlider-Display
+                .wrapperBill
+                    height: 25%
+
+                    .bill
+                        height: 40%
+
+                    .totalBill
+                        height: 60%
+
+                .wrapperSelectTip
+                    height: 25vh
+
+                    .wrapperButtons
+                        margin-top: 0.6rem
+
+                .wrapperPeople
+                    height: 25%
+
+                    .textPeople
+                        height: 40%
+
+                    .people
+                        height: 60%
+
+                    peopleBorder
+                        height: 60%
+
+            .display
+                width: 50%
+
+    .attribution
+        text-align: center
+        height: auto
+
+@media (min-width: 480px) and (max-width: 960px) and (orientation: portrait)
+    .modal
+        width: 80vw
+        height: 80vh
+        margin-right: 10vw
+        margin-left: 10vw
+
+        .wrapperSlider-Display
+            width: 90%
+            height: 90%
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: space-between
+
+            .slider
+                width: 95%
+                height: 55%
+                margin: 0
+
+                .wrapperBill
+                    height: 25%
+
+                    .bill
+                        height: 30%
+
+                    .totalBill
+                        height: 60%
+
+                .wrapperSelectTip
+                    height: 21vh
+                    margin-top: 2%
+
+                    .wrapperButtons
+                        height: 18vh
+
+                        .button
+                            width: 48%
+                            height: 29%
+
+                        .selected
+                            width: 48%
+                            height: 29%
+
+                        .custom
+                            width: 47%
+                            height: 26%
+
+                        .selectedCustom
+                            width: 47%
+                            height: 26%
+
+                .wrapperPeople
+                    height: 25%
+
+                    .textPeople
+                        height: 30%
+                        margin-bottom: 1%
+
+                    .people
+                        height: 60%
+
+            .display
                 width: 100%
-                height: 95%
-                display: flex
-                flex-direction: column
-                align-items: center
-                justify-content: space-between
+                height: 40%
 
-                .slider
-                    width: 90%
-                    height: 55%
-                    margin: 0
-
-                    .wrapperBill
-                        height: 19%
-
-                        .bill
-                            height: 40%
-
-                        .totalBill
-                            height: 60%
-
-                    .wrapperSelectTip
-                        height: 23vh
-
-                        .wrapperButtons
-                            height: 22vh
-
-                            .button
-                                width: 48%
-                                height: 29%
-
-                            .selected
-                                width: 48%
-                                height: 29%
-
-                            .custom
-                                width: 47%
-                                height: 26%
-
-                            .selectedCustom
-                                width: 47%
-                                height: 26%
-
-                    .wrapperPeople
-                        height: 18%
-
-                        .textPeople
-                            height: 40%
-
-                        .people
-                            height: 60%
-
-                .display
-                    width: 100%
-                    height: 40%
-
-        .attribution
-            text-align: center
-            height: auto
-
-    @media ( max-width: 915px) and (orientation: landscape)
-        .header
-            height: auto
-
-        .modal
-            width: 90vw
-
-            .wrapperSlider-Display
-                width: 100%
-                display: flex
-                align-items: center
-                justify-content: space-around
-
-                .slider
-                    width: 40%
-
-                    .wrapperBill
-                        height: 25%
-
-                        .bill
-                            height: 40%
-
-                        .totalBill
-                            height: 60%
-
-                    .wrapperSelectTip
-                        height: 25vh
-
-                        .wrapperButtons
-                            margin-top: 0.6rem
-
-                    .wrapperPeople
-                        height: 25%
-
-                        .textPeople
-                            height: 40%
-
-                        .people
-                            height: 60%
-
-                        peopleBorder
-                            height: 60%
-
-                .display
-                    width: 50%
-
-        .attribution
-            text-align: center
-            height: auto
-
-    @media (min-width: 480px) and (max-width: 960px) and (orientation: portrait)
-
-        .modal
-            width: 80vw
-            height: 80vh
-
-            .wrapperSlider-Display
-                width: 90%
-                height: 90%
-                display: flex
-                flex-direction: column
-                align-items: center
-                justify-content: space-between
-
-                .slider
-                    width: 95%
-                    height: 55%
-                    margin: 0
-
-                    .wrapperBill
-                        height: 25%
-
-                        .bill
-                            height: 30%
-
-                        .totalBill
-                            height: 60%
-
-                    .wrapperSelectTip
-                        height: 21vh
-                        margin-top: 2%
-
-                        .wrapperButtons
-                            height: 18vh
-
-                            .button
-                                width: 48%
-                                height: 29%
-
-                            .selected
-                                width: 48%
-                                height: 29%
-
-                            .custom
-                                width: 47%
-                                height: 26%
-
-                            .selectedCustom
-                                width: 47%
-                                height: 26%
-
-                    .wrapperPeople
-                        height: 25%
-
-                        .textPeople
-                            height: 30%
-                            margin-bottom: 1%
-
-                        .people
-                            height: 60%
-
-                .display
-                    width: 100%
-                    height: 40%
-
-        .attribution
-            text-align: center
+    .attribution
+        text-align: center
